@@ -3,6 +3,9 @@ package manning.pail;
 import com.backtype.hadoop.pail.Pail;
 import java.io.*;
 
+/**
+ * Rozdział 5.2.2
+ */
 public class PailSerializeAndDeserialize {
     public static void main(String[] args) throws IOException {
         writeLogins();
