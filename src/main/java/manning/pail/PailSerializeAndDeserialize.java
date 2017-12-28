@@ -18,6 +18,12 @@ public class PailSerializeAndDeserialize {
         out.writeObject(new Login("Grzegorz", 1234567));
         out.writeObject(new Login("Grzybek", 23456789));
         out.close();
+
+        Pail updatePail = Pail.create("/tmp/pailloginsu", new LoginPailStructure());
+        out = updatePail.openWrite();
+        out.writeObject(new Login("Grzegorz1", 12345678));
+        out.writeObject(new Login("Grzybek1", 234567890));
+        out.close();
     }
 
     private static void readLogins() throws IOException {
@@ -28,13 +34,4 @@ public class PailSerializeAndDeserialize {
     }
 }
 
-class Login {
-    public String userName;
-    public long loginUnixTime;
-
-    Login(String userName, long loginUnixTime) {
-        this.userName = userName;
-        this.loginUnixTime = loginUnixTime;
-    }
-}
 
