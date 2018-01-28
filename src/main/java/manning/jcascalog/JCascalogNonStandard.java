@@ -11,7 +11,6 @@ import cascalog.*;
 import clojure.lang.PersistentVector;
 import com.twitter.maple.tap.StdoutTap;
 import jcascalog.Api;
-import jcascalog.Playground;
 import jcascalog.Subquery;
 
 import java.util.Arrays;
