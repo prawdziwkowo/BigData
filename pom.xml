@@ -7,7 +7,24 @@
     <groupId>BigData</groupId>
     <artifactId>BigData</artifactId>
     <version>1.0-SNAPSHOT</version>
-
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    <repositories>
+        <repository>
+            <id>clojars.org</id>
+            <url>http://clojars.org/repo</url>
+        </repository>
+    </repositories>
     <dependencies>
         <dependency>
             <groupId>com.backtype</groupId>
@@ -41,7 +58,12 @@
             <artifactId>commons-lang3</artifactId>
             <version>3.0</version>
         </dependency>
-
+        <!-- https://mvnrepository.com/artifact/cascalog/cascalog -->
+        <dependency>
+            <groupId>cascalog</groupId>
+            <artifactId>cascalog</artifactId>
+            <version>2.1.1</version>
+        </dependency>
     </dependencies>
 
 </project>
