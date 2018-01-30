@@ -16,7 +16,7 @@ public class JCascalogAgeGender {
     );
 
     public static void main(String[] args) {
-//        join();
+        join();
 //        leftJoin();
 //        lefRightJoin();
 //        union();
@@ -26,7 +26,8 @@ public class JCascalogAgeGender {
     //odpowiednik inner join
     private static void join() {
         Api.execute(
-            new StdoutTap(),
+//            new StdoutTap(),
+                Api.hfsTextline("/tmp/join"),
             new Subquery("?person", "?age", "?gender")
                 .predicate(Playground.AGE, "?person", "?age")
                 .predicate(Playground.GENDER, "?person", "?gender")
